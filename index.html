@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+        header {
+            background: #166534;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 { color: #166534; }
+        .notice, .doctor {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px #00000010;
+        }
+        .notice { background: #dcfce7; }
+        .doctors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        button {
+            background: #15803d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Online Hospital Appointment Portal</h1>
+    <p>Quality Healthcare, Convenient Appointments</p>
+</header>
+
+<main>
+    <section class="notice">
+        <h2>Hospital Announcements</h2>
+        <p>Online appointment booking is available for all listed specialists.</p>
+        <p>Please arrive 15 minutes before your consultation.</p>
+    </section>
+
+    <h2>Doctor Profiles</h2>
+    <section class="doctors">
+        <article class="doctor">
+            <h3>Dr. Arun Kumar</h3>
+            <p>Specialization: Cardiology</p>
+            <p>Consultation: 9:00 AM – 12:00 PM</p>
+            <p>Available Slots: 9:30 AM, 10:00 AM, 11:00 AM</p>
+            <button onclick="bookAppointment('Dr. Arun Kumar')">
+                Book Appointment
+            </button>
+        </article>
+
+        <article class="doctor">
+            <h3>Dr. Meera Nair</h3>
+            <p>Specialization: Dermatology</p>
+            <p>Consultation: 1:00 PM – 4:00 PM</p>
+            <p>Available Slots: 1:30 PM, 2:00 PM, 3:00 PM</p>
+            <button onclick="bookAppointment('Dr. Meera Nair')">
+                Book Appointment
+            </button>
+        </article>
+
+        <article class="doctor">
+            <h3>Dr. Rahul Sharma</h3>
+            <p>Specialization: Orthopedics</p>
+            <p>Consultation: 4:00 PM – 7:00 PM</p>
+            <p>Available Slots: 4:30 PM, 5:00 PM, 6:00 PM</p>
+            <button onclick="bookAppointment('Dr. Rahul Sharma')">
+                Book Appointment
+            </button>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>Online Hospital Appointment Portal | Your Health, Our Priority</p>
+</footer>
+
+<script>
+    function bookAppointment(doctor) {
+        alert("Appointment request received for " + doctor +
+              ". Thank you for choosing our hospital!");
+    }
+</script>
+</body>
+</html>
